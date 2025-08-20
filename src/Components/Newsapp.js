@@ -7,7 +7,8 @@ const Newsapp = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
-    const API_KEY = "44f50d27070749789c8ea75c178f20c3";
+    const API_KEY = process.env.REACT_APP_NEWS_API_KEY;
+
 
     const getData = async (query = search) => {
         try {
